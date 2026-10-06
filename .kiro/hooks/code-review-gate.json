@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Code Standards Review",
+      "trigger": "PreToolUse",
+      "description": "Review code changes against project standards before writing files",
+      "matcher": "fs_write|str_replace",
+      "action": {
+        "type": "agent",
+        "prompt": "Before writing code, ensure it follows the project standards defined in .kiro/steering/project-standards.md. Check for:\n- Proper error handling\n- Security best practices\n- Code style consistency\n- Appropriate HTTP status codes\n- Input validation"
+      }
+    }
+  ]
+}

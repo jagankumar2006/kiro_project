@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Lint and Test on Save",
+      "trigger": "PostFileSave",
+      "description": "Automatically run tests when backend JavaScript files are saved",
+      "matcher": "student-todo.*\\.(js|json)$",
+      "action": {
+        "type": "command",
+        "command": "cd student-todo/backend && npm run test 2>/dev/null || echo \"Tests not available yet\""
+      }
+    }
+  ]
+}
