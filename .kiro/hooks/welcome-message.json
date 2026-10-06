@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Development Welcome",
+      "trigger": "SessionStart",
+      "description": "Welcome message and quick start instructions",
+      "action": {
+        "type": "command",
+        "command": "echo \"Welcome to Student Todo Development! 📚\" && echo \"Run 'cd student-todo/backend && npm run dev' to start the server\" && echo \"Open student-todo/frontend/index.html to view the app\""
+      }
+    }
+  ]
+}
