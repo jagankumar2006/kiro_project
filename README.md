@@ -258,11 +258,6 @@ DB_PATH=../data/tasks.db
 4. Run tests to diagnose
 5. Review `.kiro/MCP-SETUP.md` for MCP configuration
 
----
-
-## 📄 License
-
-[Add your license information here]
 
 ---
 
