@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student To-Do — Sign In</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1>📚 Student To-Do</h1>
+
+      <!-- Tab bar -->
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true"
+                aria-controls="panel-login" id="tab-login">
+          Login
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false"
+                aria-controls="panel-register" id="tab-register">
+          Register
+        </button>
+      </div>
+
+      <!-- Login panel -->
+      <div class="tab-panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" name="username"
+                   autocomplete="username" required minlength="3" maxlength="50" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password"
+                   autocomplete="current-password" required minlength="8" maxlength="128" />
+          </div>
+          <p class="error-msg" id="login-error" role="alert" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary btn-full">Login</button>
+        </form>
+      </div>
+
+      <!-- Register panel -->
+      <div class="tab-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register">
+        <form id="register-form" novalidate>
+          <div class="form-group">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" name="username"
+                   autocomplete="username" required minlength="3" maxlength="50" />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" name="password"
+                   autocomplete="new-password" required minlength="8" maxlength="128" />
+          </div>
+          <p class="error-msg" id="register-error" role="alert" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
